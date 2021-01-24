@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 Cyclone-AOSP
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Elegance -->
+    <string name="cyclone_settings_title">Cyclone</string>
+
+    <!-- Categories -->
+    <string name="cyclone_title">User Interface</string>
+    <string name="cyclone_summary">User Interface Customisations</string>
+    <string name="animations_title">Animations</string>
+    <string name="animations_summary">Animation Customisations</string>
+    <string name="buttons_title">Buttons</string>
+    <string name="buttons_summary">Button Customisations</string>
+    <string name="gestures_title">Gestures</string>
+    <string name="gestures_summary">Gesture Customisations</string>
+    <string name="lockscreen_title">Lock Screen</string>
+    <string name="lockscreen_summary">Lockscreen Customisations</string>
+    <string name="misc_title">Miscellaneous</string>
+    <string name="misc_summary">Misc Customisations</string>
+    <string name="navigation_title">Navigation</string>
+    <string name="navigation_summary">Navigation Customisations</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_summary">Notification Customisations</string>
+    <string name="quicksettings_title">Quick Settings</string>
+    <string name="quicksettings_summary">Quick settings Customisations</string>
+    <string name="statusbar_title">Status Bar</string>
+    <string name="statusbar_summary">Statusbar Customisations</string>
+    <string name="battery_title">Battery</string>
+    <string name="battery_saving_summary">Battery Customisations</string>
+    <string name="ambient_display_custom_title">Ambient Display</string>
+    <string name="ambient_display_custom_summary">Ambient display Customisations</string>
+    <string name="system_settings_title">System</string>
+    <string name="system_settings_summary">System Customisations</string>
+
+</resources>
