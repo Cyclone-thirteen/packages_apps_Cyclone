@@ -50,7 +50,7 @@ public class UserInterface extends SettingsPreferenceFragment
     
     @Override
     public void onChange(boolean selfChange, Uri uri) {    
-        if (uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_STYLE))) {
+        if (uri.equals(Settings.System.getUriFor(Settings.System.QS_PANEL_STYLE)) || uri.equals(Settings.System.getUriFor(Settings.System.QS_UI_STYLE))) {
             updateQsStyle();
         }
     }
@@ -77,10 +77,19 @@ public class UserInterface extends SettingsPreferenceFragment
         int qsPanelStyle = Settings.System.getIntForUser(getContext().getContentResolver(),
                 Settings.System.QS_PANEL_STYLE , 0, UserHandle.USER_CURRENT);
 
+        boolean isA11Style = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_UI_STYLE , 0, UserHandle.USER_CURRENT) == 1;
+
 	String qsPanelStyleCategory = "android.theme.customization.qs_panel";
+  String qsUIStyleCategory = "android.theme.customization.qs_ui";
 
 	/// reset all overlays before applying
 	resetQsOverlays(qsPanelStyleCategory);
+	resetQsOverlays(qsUIStyleCategory);
+
+	if (isA11Style) {
+	    setQsStyle("com.android.system.qs.ui.A11", qsUIStyleCategory);
+	}
 
 	if (qsPanelStyle == 0) return;
 
