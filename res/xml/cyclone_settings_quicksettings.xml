@@ -24,4 +24,10 @@
           android:summary="@string/qs_footer_datausage_summary"
           android:defaultValue="false" />
 
+    <Preference
+        android:key="tiles_layout"
+        android:title="@string/qs_tiles_layout_category"
+        android:summary="@string/qs_tile_layout_summary"
+        android:fragment="com.cyclone.settings.fragments.QsLayoutSettings"/> 
+
 </PreferenceScreen>
