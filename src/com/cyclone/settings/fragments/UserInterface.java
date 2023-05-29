@@ -18,6 +18,7 @@ package com.cyclone.settings.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.database.ContentObserver;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.SystemProperties;
@@ -70,7 +71,8 @@ public class UserInterface extends SettingsPreferenceFragment
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.QS_UI_STYLE),
                     false, this, UserHandle.USER_ALL);
-        }            
+        }
+    }                    
     private void updateQsStyle() {
         ContentResolver resolver = getActivity().getContentResolver();
 
@@ -86,6 +88,8 @@ public class UserInterface extends SettingsPreferenceFragment
 	/// reset all overlays before applying
 	resetQsOverlays(qsPanelStyleCategory);
 	resetQsOverlays(qsUIStyleCategory);
+  
+  mQsTileShape.setEnabled(isA11Style);
 
 	if (isA11Style) {
 	    setQsStyle("com.android.system.qs.ui.A11", qsUIStyleCategory);
