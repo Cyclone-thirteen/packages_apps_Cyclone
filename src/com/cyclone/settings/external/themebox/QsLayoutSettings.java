@@ -49,6 +49,7 @@ public class QsLayoutSettings extends SettingsPreferenceFragment
 
     private static final String KEY_QS_HIDE_LABEL = "qs_tile_label_hide";
     private static final String KEY_QS_LABEL_SIZE = "qs_tile_label_size";
+    private static final String KEY_QS_SECONDARY_LABEL_SIZE = "qs_tile_secondary_label_size";
     private static final String KEY_QS_VERTICAL_LAYOUT = "qs_tile_vertical_layout";
     private static final String KEY_QS_COLUMN_PORTRAIT = "qs_layout_columns";
     private static final String KEY_QS_ROW_PORTRAIT = "qs_layout_rows";
@@ -69,6 +70,7 @@ public class QsLayoutSettings extends SettingsPreferenceFragment
     private SystemSettingSwitchPreference mHide;
     private SystemSettingSwitchPreference mVertical;
     private SystemSettingSeekBarPreference mSize;
+    private SystemSettingSeekBarPreference mSizeSec;
 
     private int[] currentValue = new int[2];
 
@@ -141,6 +143,9 @@ public class QsLayoutSettings extends SettingsPreferenceFragment
         mSize = (CustomSeekBarPreference) findPreference(KEY_QS_LABEL_SIZE);
         mSize.setEnabled(!hideLabel);
 
+        mSizeSec = (SystemSettingSeekBarPreference) findPreference(KEY_QS_SECONDARY_LABEL_SIZE);
+        mSizeSec.setEnabled(!hideLabel);
+
     }
 
     @Override
@@ -149,6 +154,7 @@ public class QsLayoutSettings extends SettingsPreferenceFragment
             boolean hideLabel = (Boolean) newValue;
             mVertical.setEnabled(!hideLabel);
             mSize.setEnabled(!hideLabel);
+            mSizeSec.setEnabled(!hideLabel);
         } else if (preference == mQsColumns) {
             int qs_columns = Integer.parseInt(newValue.toString());
             mApplyChange.setEnabled(
