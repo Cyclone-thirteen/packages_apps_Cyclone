@@ -24,6 +24,12 @@
           android:summary="@string/qs_footer_datausage_summary"
           android:defaultValue="false" />
 
+     <com.android.settings.custom.preference.SystemSettingSwitchPreference
+          android:key="qs_dual_tone"
+          android:title="@string/qs_dual_tone_title"
+          android:summary="@string/qs_dual_tone_summary"
+          android:defaultValue="true" />
+
     <Preference
         android:key="tiles_layout"
         android:title="@string/qs_tiles_layout_category"

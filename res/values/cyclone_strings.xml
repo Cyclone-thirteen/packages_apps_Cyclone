@@ -66,6 +66,10 @@
     <string name="lockscreen_battery_info_title">Lock screen charging info</string>
     <string name="lockscreen_battery_info_summary">Display negotiated charger max current and voltage, and battery temperature on lock screen while charging</string>
 
+    <!-- QS Dual Tone Colors -->
+    <string name="qs_dual_tone_title">QS dual-tone</string>
+    <string name="qs_dual_tone_summary">Use dual tone background colors</string>
+
     <!-- Quick settings styles -->
     <string name="qs_styles_title">Quick Settings Styles</string>
     <string name="qs_ui_title">Quick Settings UI</string>    
