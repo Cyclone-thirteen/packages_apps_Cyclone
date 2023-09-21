@@ -46,4 +46,18 @@
             android:summary="@string/theme_customization_lock_clock_summary"
             android:fragment="com.cyclone.settings.external.themebox.LockClockFonts"/>
 
+        <!-- Signal icon style -->
+        <Preference
+            android:key="android.theme.customization.signal_icon"
+            android:title="@string/theme_customization_signal_icon_title"
+            android:summary="@string/theme_customization_signal_icon_summary"
+            android:fragment="com.cyclone.settings.external.themebox.SignalIcons"/>
+
+        <!-- Wifi icon style -->
+        <Preference
+            android:key="android.theme.customization.wifi_icon"
+            android:title="@string/theme_customization_wifi_icon_title"
+            android:summary="@string/theme_customization_wifi_icon_summary"
+            android:fragment="com.cyclone.settings.external.themebox.WifiIcons"/>
+
 </PreferenceScreen>
