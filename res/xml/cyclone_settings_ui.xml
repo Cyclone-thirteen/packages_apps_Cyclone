@@ -18,6 +18,13 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/cyclone_title" >
 
+        <!-- Monet Settings -->
+        <Preference
+            android:key="monet_settings"
+            android:title="@string/monet_settings_title"
+            android:summary="@string/monet_settings_sammary"
+            android:fragment="com.android.settings.custom.fragments.MonetSettings" />
+
         <!-- Icon pack -->
         <Preference
             android:key="android.theme.customization.icon_pack"
